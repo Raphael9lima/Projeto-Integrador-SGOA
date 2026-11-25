@@ -256,6 +256,22 @@ O armazenamento de arquivos utiliza o bucket:
 anexos-ocorrencias
 ```
 
+### Preparação das contas de teste
+
+Os scripts utilizam dois arquivos JSON locais, criados manualmente na raiz do projeto:
+
+- `cadastro.json`: credenciais de uma conta de teste com perfil ALUNO.
+- `cadastro-tecnico.json`: credenciais de uma conta de teste com perfil TECNICO.
+
+Cada arquivo deve ser um objeto JSON com duas propriedades de texto:
+
+- `email`: endereço cadastrado no Supabase Auth.
+- `senha`: senha da respectiva conta de teste.
+
+Crie as contas pelo endpoint de cadastro ou pelo ambiente de autenticação do Supabase, garantindo que os perfis estejam configurados corretamente na tabela `usuarios`.
+
+Os arquivos são utilizados pelos scripts para realizar login automaticamente. Não compartilhe esses arquivos e nunca os adicione ao Git.
+
 ## Testes
 
 Os scripts de teste estão na raiz do projeto e podem ser executados individualmente:
